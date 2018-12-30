@@ -7,6 +7,8 @@ var app = express()
 app.use(bodyparser.json())
 app.use(morgan('dev'))
 
+let profile = [{ username: 'aparna', email:'aparna@xyz.com', url: 'http://github.com/adhurjati'}]
+
 app.use((req,res,next) => {
  console.log(`${req.method} ${req.url}`)
  if (req.query.api_key){
